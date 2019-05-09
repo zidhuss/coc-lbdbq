@@ -44,6 +44,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
         items: matches.map(m => {
           return {
             word: `${m.name} <${m.email}>`,
+            filterText: `${m.email}${m.name}`
           }
         }),
       }
