@@ -1,6 +1,6 @@
 {
   "name": "coc-lbdbq",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "lbdbq extension for coc.nvim",
   "main": "lib/index.js",
   "scripts": {
