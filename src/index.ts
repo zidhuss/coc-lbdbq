@@ -27,6 +27,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
     filetypes: ['mail'],
     priority: 99,
     sourceType: SourceType.Service,
+    triggerOnly: true,
     triggerPatterns: [
       /^(Bcc|Cc|From|Reply-To|To):\s*/,
       /^(Bcc|Cc|From|Reply-To|To):.*,\s*/,
@@ -44,7 +45,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
         items: matches.map(m => {
           return {
             word: `${m.name} <${m.email}>`,
-            filterText: `${m.email}${m.name}`
+            filterText: `${m.email}${m.name}`,
           }
         }),
       }
